@@ -1,0 +1,51 @@
+{
+  "name": "@figliozzi/signet-cli",
+  "version": "0.1.0",
+  "description": "CLI for Signet SDK - Interactive transaction ordering",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "signet": "dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/bin.ts",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "signet",
+    "ethereum",
+    "cli",
+    "transactions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@oclif/core": "^4.0.0",
+    "@inquirer/prompts": "^7.2.0",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.3.0",
+    "viem": "^2.21.0",
+    "zod": "^3.23.8",
+    "cli-table3": "^0.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
