@@ -1,0 +1,30 @@
+[package]
+name = "signet-cli"
+description = "Command-line tool for testing Signet SDK features"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+signet-bundle.workspace = true
+signet-constants.workspace = true
+signet-types.workspace = true
+signet-tx-cache.workspace = true
+signet-zenith.workspace = true
+
+alloy.workspace = true
+clap = { version = "4.5", features = ["derive"] }
+eyre.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde_json.workspace = true
+
+# UI/UX
+owo-colors = { version = "4.1", features = ["supports-colors"] }
+indicatif = "0.17"
+comfy-table = "7.1"
